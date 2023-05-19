@@ -120,6 +120,14 @@ Replace Conditional with Polymorphism
 در دیگر جاهای کد هم برای مثلا به جای هر کدام از Typeaddress.Direct از new Direct() استفاده میکنیم.
 
 
+Sixth and Seventh:
+Facade
+
+کلاس های MemoryFacade و CodeGeneratorFacade را اضافه میکنیم.
+
+![image](https://github.com/alikmr1378/softeng7/assets/87147901/e8786480-dd75-49c2-be8a-c8eddb59d917)
+![image](https://github.com/alikmr1378/softeng7/assets/87147901/ae7fc80b-edb9-4860-ae9f-278825ba1d1f)
+
 
 
 
