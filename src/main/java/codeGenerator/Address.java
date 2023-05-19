@@ -26,19 +26,11 @@ public class Address {
 
     public Address(int num, varType varType) {
         this.setNum(num);
-        this.Type = TypeAddress.Direct;
+        this.Type = new Direct();
         this.varType = varType;
     }
 
     public String toString() {
-        switch (Type) {
-            case Direct:
-                return getnum() + "";
-            case Indirect:
-                return "@" + getnum();
-            case Imidiate:
-                return "#" + getnum();
-        }
-        return getnum() + "";
+        return Type.toString(num);
     }
 }
