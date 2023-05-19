@@ -83,10 +83,18 @@ Remove switch statements
 
 
 Fifth:
+
 Replace Conditional with Polymorphism
+
 در این قسمت نیاز داریم تعدادی کلاس جدید تعریف کنیم تا به جای سوییچ کیس بتوانیم از آن ها استفاده کنیم.
+
+کلاس TypeAddress را مانند زیر تغییر میدهیم :
+![image](https://github.com/alikmr1378/softeng7/assets/87147901/b54c3e23-1924-4ef5-961e-39293bdfc74c)
+
+
+
 کلاس هایی که ایجاد شده اند:
-1.
+
 ![image](https://github.com/alikmr1378/softeng7/assets/87147901/907c6b26-984f-4651-9864-52c315244c65)
 همینطور برای Indirect و Imidiate.
 سپس مشکلاتی که بر اساس این تغییر در کد ها به وجود آمده را اعمال می کنیم تا کد دوباره قابل اجرا شود.
