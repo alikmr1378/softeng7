@@ -244,7 +244,8 @@ public class CodeGenerator {
                 t = varType.Bool;
                 break;
         }
-        Address temp = new Address(memory.getTemp(), t);
+        Address temp = new Address(memory.getLastTempIndex(), t);
+        memory.updateTemp();
         ss.push(temp);
         memory.add3AddressCode(Operation.ASSIGN, new Address(temp.num, varType.Address, TypeAddress.Imidiate), new Address(symbolTable.getMethodReturnAddress(className, methodName), varType.Address), null);
         memory.add3AddressCode(Operation.ASSIGN, new Address(memory.getCurrentCodeBlockAddress() + 2, varType.Address, TypeAddress.Imidiate), new Address(symbolTable.getMethodCallerAddress(className, methodName), varType.Address), null);
@@ -299,7 +300,8 @@ public class CodeGenerator {
     }
 
     public void add() {
-        Address temp = new Address(memory.getTemp(), varType.Int);
+        Address temp = new Address(memory.getLastTempIndex(), varType.Int);
+        memory.updateTemp();
         Address s2 = ss.pop();
         Address s1 = ss.pop();
 
@@ -311,7 +313,8 @@ public class CodeGenerator {
     }
 
     public void sub() {
-        Address temp = new Address(memory.getTemp(), varType.Int);
+        Address temp = new Address(memory.getLastTempIndex(), varType.Int);
+        memory.updateTemp();
         Address s2 = ss.pop();
         Address s1 = ss.pop();
         if (s1.varType != varType.Int || s2.varType != varType.Int) {
