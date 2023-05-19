@@ -12,6 +12,7 @@ Seperate Query from Modifier
         return lastTempIndex - tempSize;
     }
     بعد از تغییر:
+    
         public int getLastTempIndex(){
         return lastTempIndex;
     }
@@ -22,7 +23,8 @@ Seperate Query from Modifier
     در فایل کد جنریتور هم به جای خط زیر(هر جا که استفاده شده)با توجه به تابع های تعریف شده در بالا از دستور های جدید استفاده میکنیم.
     حالت اولیه:
     Address temp = new Address(memory.getTemp(), t);
-بعد از تغییر
+بعد از تغییر:
+
     Address temp = new Address(memory.getLastTempIndex(), t);
     memory.updateTemp();
 
