@@ -28,4 +28,27 @@ Seperate Query from Modifier
     Address temp = new Address(memory.getLastTempIndex(), t);
     memory.updateTemp();
 
-Third:
+Third: 
+Self Encapsulated field
+
+برای هر متغیر تابع set و get خود را بذاریم. برای مثلا برای متغیر num در کلاس address این کار را انجام می دهیم:
+قبل از تغییر:
+public int num;
+بعد از تغییر:
+    private int num;
+    public int getnum(){
+        return num;
+    }
+    public void setNum(int num) {
+        this.num = num;
+    }
+
+حالا هر جایی که از متغیر num استفاده کرده ایم را به جای آنکه مستقیم خود آن را صدا بزنیم تابع getnum را صدا میزنیم و هر جایی که میخواستیم آن را مقدار دهی کنیم از setNum استفاده می کنیم.
+
+![image](https://github.com/alikmr1378/softeng7/assets/87147901/88f27eb6-ce13-44ba-965f-bf49b68c5910)
+همانطور که در تصویر بالا ملاحظه می شود پس از اعمال تغییرات پارامتر نام فقط در دو تابع getnum و setNum استفاده شده و بقیه جاها از این دو تابع استفاده کردیم.
+
+Fourth:
+
+
+
