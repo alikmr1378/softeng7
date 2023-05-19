@@ -55,6 +55,29 @@ public int num;
 همانطور که در تصویر بالا ملاحظه می شود پس از اعمال تغییرات پارامتر نام فقط در دو تابع getnum و setNum استفاده شده و بقیه جاها از این دو تابع استفاده کردیم.
 
 Fourth:
+Remove switch statemnets
+
+حذف سوییچ کیس استفاده شده در کد:
+قبل از تغییر:
+
+        switch (s.type) {
+            case Bool:
+                t = varType.Bool;
+                break;
+            case Int:
+                t = varType.Int;
+                break;
+        }
+        
+        بعد از تغییر:
+        
+        
+        if (s.type.toString() == "Bool"){
+            t = varType.Bool;
+        }
+        else if (s.type.toString() == "int") {
+            t = varType.Int;
+        }
 
 
 
