@@ -7,10 +7,12 @@ Seperate Query from Modifier
 
 در ابتدا تابع زیر را تغییر میدهیم تا برای انجام هر کار تابع جدا گانه داشته باشیم
 تابع اولیه:
+
     public int getTemp() {
         lastTempIndex += tempSize;
         return lastTempIndex - tempSize;
     }
+    
     بعد از تغییر:
     
         public int getLastTempIndex(){
@@ -20,6 +22,7 @@ Seperate Query from Modifier
     public void updateTemp(){
         lastTempIndex += tempSize;
     }
+    
     در فایل کد جنریتور هم به جای خط زیر(هر جا که استفاده شده)با توجه به تابع های تعریف شده در بالا از دستور های جدید استفاده میکنیم.
     حالت اولیه:
     Address temp = new Address(memory.getTemp(), t);
@@ -35,6 +38,7 @@ Self Encapsulated field
 قبل از تغییر:
 
 public int num;
+
 بعد از تغییر:
 
     private int num;
