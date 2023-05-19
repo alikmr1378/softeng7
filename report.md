@@ -58,6 +58,7 @@ Fourth:
 Remove switch statements
 
 حذف سوییچ کیس استفاده شده در کد:
+
 قبل از تغییر:
 
         switch (s.type) {
@@ -69,6 +70,7 @@ Remove switch statements
                 break;
         }
         
+        
         بعد از تغییر:
         
         
@@ -78,6 +80,40 @@ Remove switch statements
         else if (s.type.toString() == "int") {
             t = varType.Int;
         }
+
+
+Fifth:
+Replace Conditional with Polymorphism
+در این قسمت نیاز داریم تعدادی کلاس جدید تعریف کنیم تا به جای سوییچ کیس بتوانیم از آن ها استفاده کنیم.
+کلاس هایی که ایجاد شده اند:
+1.
+![image](https://github.com/alikmr1378/softeng7/assets/87147901/907c6b26-984f-4651-9864-52c315244c65)
+همینطور برای Indirect و Imidiate.
+سپس مشکلاتی که بر اساس این تغییر در کد ها به وجود آمده را اعمال می کنیم تا کد دوباره قابل اجرا شود.
+برای مثال: کد قبلی :
+
+
+        switch (Type) {
+            case Direct:
+                return getnum() + "";
+            case Indirect:
+                return "@" + getnum();
+            case Imidiate:
+                return "#" + getnum();
+        }
+        return getnum() + "";
+
+
+بعد از تغییر:
+
+        return Type.toString(num);
+
+
+در دیگر جاهای کد هم برای مثلا به جای هر کدام از Typeaddress.Direct از new Direct() استفاده میکنیم.
+
+
+
+
 
 
 
