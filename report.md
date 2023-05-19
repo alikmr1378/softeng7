@@ -55,7 +55,7 @@ public int num;
 همانطور که در تصویر بالا ملاحظه می شود پس از اعمال تغییرات پارامتر نام فقط در دو تابع getnum و setNum استفاده شده و بقیه جاها از این دو تابع استفاده کردیم.
 
 Fourth:
-Remove switch statemnets
+Remove switch statements
 
 حذف سوییچ کیس استفاده شده در کد:
 قبل از تغییر:
