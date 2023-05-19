@@ -33,8 +33,10 @@ Self Encapsulated field
 
 برای هر متغیر تابع set و get خود را بذاریم. برای مثلا برای متغیر num در کلاس address این کار را انجام می دهیم:
 قبل از تغییر:
+
 public int num;
 بعد از تغییر:
+
     private int num;
     public int getnum(){
         return num;
